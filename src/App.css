@@ -1,0 +1,134 @@
+/* General body styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+/* Main container for both token display and manage pages */
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Set to 5 equal columns */
+  gap: 10px; /* Space between rooms */
+  padding: 10px;
+  max-width: 1200px; /* Set max width to ensure 5 rooms fit in one row */
+  height: 730px;
+  margin: auto;
+}
+
+/* Styling individual rooms */
+.room {
+  background-color: #ffffff;
+  border: 2px solid #dcdfe6;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  min-width: 180px; /* Maintain smaller room size */
+  
+  
+  height: 180px;
+}
+
+.room:hover {
+  transform: scale(1.05);
+}
+
+/* Room heading */
+.room h2 {
+  font-size: 25px;
+  color: #4a90e2;
+  margin-bottom: 10px;
+}
+
+/* Display for currently serving token */
+.serving-token {
+  font-size: 30px;
+  font-weight: bold;
+  color: #ff4d4d;
+  margin-top: 10px;
+}
+
+/* Queue and currently serving section in the manage page */
+.room p {
+  font-size: 14px;
+  color: #777;
+}
+
+/* Buttons */
+button {
+  padding: 8px 12px;
+  margin: 5px 3px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Reset button styling */
+.reset-button {
+  background-color: #ff4d4d;
+}
+
+.reset-button:hover {
+  background-color: #e63b3b;
+}
+
+/* Header */
+h1 {
+  text-align: center;
+  font-size: 32px;
+  margin: 20px 0;
+  color: #333;
+}
+
+/* Make the layout responsive */
+@media screen and (max-width: 1200px) {
+  .container {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Switch to auto-fit for smaller screens */
+  }
+
+  .room {
+    height: auto; /* Adjust height on smaller screens */
+  }
+}
+
+/* Button container for managing actions */
+.button-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.button-container button {
+  padding: 8px 12px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.button-container button:hover {
+  background-color: #0056b3;
+}
+
+.reset {
+  margin-top: 10px;
+}

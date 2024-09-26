@@ -1,0 +1,88 @@
+/* manage.css */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.room {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  margin: 10px;
+  flex: 1 1 calc(30% - 20px); /* Adjust width based on available space */
+  min-width: 280px; /* Minimum width for the room box */
+  max-width: 300px; /* Maximum width for the room box */
+}
+
+.room h2 {
+  margin: 0 0 10px;
+  color: #333;
+}
+
+.room p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+button {
+  background-color: #007bff; /* Bootstrap primary color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+button:active {
+  transform: translateY(1px); /* Slight click effect */
+}
+
+button[style*="background-color: #ffcc00"] {
+  background-color: #ffcc00;
+}
+
+button[style*="background-color: #ff4d4d"] {
+  background-color: #ff4d4d;
+}
+
+button[style*="background-color: #ffcc00"]:hover {
+  background-color: #e6b800; /* Darker shade for reset room button */
+}
+
+button[style*="background-color: #ff4d4d"]:hover {
+  background-color: #ff1a1a; /* Darker shade for reset all button */
+}
+
+@media (max-width: 768px) {
+  .room {
+    flex: 1 1 calc(45% - 20px); /* Adjust width for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .room {
+    flex: 1 1 100%; /* Full width for very small screens */
+  }
+}
