@@ -11,7 +11,7 @@ const App = () => {
       <Router>
         <Routes>
           <Route path="/" element={<TokenDisplay />} />
-          <Route path="/manage" element={<ManageTokens />} />
+          <Route path="#/manage" element={<ManageTokens />} />
         </Routes>
       </Router>
     </TokenProvider>
